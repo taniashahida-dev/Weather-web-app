@@ -1,7 +1,3 @@
-/* =========================
-   1. Global Styles
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -25,10 +21,6 @@ button {
   cursor: pointer;
 }
 
-/* =========================
-   2. Main Container
-========================= */
-
 .weather-app {
   max-width: 1000px;
   width: 100%;
@@ -39,10 +31,6 @@ button {
   border-radius: 14px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
 }
-
-/* =========================
-   3. Header
-========================= */
 
 .app-header {
   display: flex;
@@ -64,10 +52,6 @@ button {
   color: #666;
   font-size: 14px;
 }
-
-/* =========================
-   4. Search Section
-========================= */
 
 .search-section {
   margin-bottom: 30px;
@@ -146,10 +130,6 @@ button {
   margin-top: 10px;
 }
 
-/* =========================
-   5. Current Weather
-========================= */
-
 .current-weather {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.5fr auto;
@@ -226,10 +206,6 @@ button {
   justify-content: center;
 }
 
-/* =========================
-   6. Forecast Section
-========================= */
-
 .forecast-section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -289,10 +265,6 @@ button {
 .forecast-temp {
   font-size: 14px;
 }
-
-/* =========================
-   7. Footer
-========================= */
 
 .app-footer {
   text-align: center;
@@ -408,5 +380,102 @@ button {
 
   .forecast-section {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Disabled Buttons */
+
+.location-btn:disabled,
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading Animation */
+
+.loading-message {
+  font-weight: 500;
+  animation: loadingPulse 1s infinite alternate;
+}
+
+@keyframes loadingPulse {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Error Message */
+
+.error-message {
+  line-height: 1.5;
+}
+
+/* Weather Icon */
+
+.weather-icon {
+  transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Forecast Scrollbar */
+
+.forecast-list::-webkit-scrollbar {
+  height: 5px;
+}
+
+.forecast-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.forecast-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Forecast Hover */
+
+.forecast-item {
+  transition: transform 0.2s ease;
+}
+
+.forecast-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Empty Forecast */
+
+.no-forecast {
+  color: #777;
+  font-size: 13px;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Mobile Improvements */
+
+@media (max-width: 550px) {
+  .forecast-list {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .forecast-item {
+    min-width: 55px;
+    flex: 0 0 auto;
+  }
+
+  .forecast-time {
+    font-size: 11px;
+  }
+
+  .forecast-icon {
+    font-size: 25px;
   }
 }
