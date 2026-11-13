@@ -1,4 +1,3 @@
-
 /* =========================
    1. Global Styles
 ========================= */
@@ -26,7 +25,6 @@ button {
   cursor: pointer;
 }
 
-
 /* =========================
    2. Main Container
 ========================= */
@@ -41,7 +39,6 @@ button {
   border-radius: 14px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
 }
-
 
 /* =========================
    3. Header
@@ -67,7 +64,6 @@ button {
   color: #666;
   font-size: 14px;
 }
-
 
 /* =========================
    4. Search Section
@@ -150,7 +146,6 @@ button {
   margin-top: 10px;
 }
 
-
 /* =========================
    5. Current Weather
 ========================= */
@@ -231,7 +226,6 @@ button {
   justify-content: center;
 }
 
-
 /* =========================
    6. Forecast Section
 ========================= */
@@ -296,7 +290,6 @@ button {
   font-size: 14px;
 }
 
-
 /* =========================
    7. Footer
 ========================= */
@@ -308,13 +301,11 @@ button {
   margin-top: 24px;
 }
 
-
 /* =========================
    8. Responsive Design
 ========================= */
 
 @media (max-width: 800px) {
-
   .current-weather {
     grid-template-columns: 1fr 1.5fr;
   }
@@ -335,11 +326,9 @@ button {
   .input-group {
     flex-basis: 100%;
   }
-
 }
 
 @media (max-width: 550px) {
-
   body {
     padding: 12px;
   }
@@ -420,6 +409,4 @@ button {
   .forecast-section {
     grid-template-columns: 1fr;
   }
-
 }
-
